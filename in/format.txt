@@ -1,0 +1,43 @@
+# Format of input files:
+
+
+## "network.txt": file of reaction network
+```text
+------------------------------------------------------------------------
+NE  NS  NR      ### Number of Elements, Species and Reactions.
+H      1.0      ### Element list: element + mass (amu)
+......
+P      31.0
+           e  H  He C  N  O  SI S  Fe Na Mg CL P ### A-blank-line or some content.                                                             
+H          0  1  0  0  0  0  0  0  0  0  0  0  0 ### species list: species + atom number         
+......
+                                                 ### A-blank-line here  or some content.
+E       GRAIN0          GRAIN-                                   6.90E-15 5.00E-01 0.00E+00 0  ###  reaction list: See Ref(1).
+......
+------------------------------------------------------------------------
+Ref(1) :        reactants(3) + product(5) + alpha + beta + gamma + ITYPE
+        Format: string(3)    + string(5)  + float + float + float + integer
+```
+
+## "ed.txt": file of binding energy
+```text
+------------------------------------------------------------------------
+195                           ### Number of species with binding energy.
+Spec     ED(K)    references  ### A-blank-line or some content.         
+H         450.    osu_2008_03ggs.dat    ### species + binding energy    
+......
+------------------------------------------------------------------------
+```
+
+## "iabun.txt": file of initial abundance
+```text
+------------------------------------------------------------------------
+13           ### Number of species with initial abundances (n(X)/n(H)).
+HE           9.000000E-02  ### species + abundance
+......
+------------------------------------------------------------------------
+```
+
+
+
+

@@ -1,0 +1,4 @@
+GGCHEM (Gas-Grain CHEMical code for interstellar clouds).
+Author: Jixing Ge
+Email: gejixing666@gmail.com
+

@@ -1,0 +1,197 @@
+195  ### Number of species with binding energy      
+Spec     ED(K)    references         
+H         450.    osu_2008_03ggs.dat         1
+HE        200.    osu_2008_03ggs.dat         2
+C         800.    osu_2008_03ggs.dat         3
+N         800.    osu_2008_03ggs.dat         4
+O         800.    osu_2008_03ggs.dat         5
+SI       2700.    osu_2008_03ggs.dat         6
+S        1100.    osu_2008_03ggs.dat         7
+FE       4200.    osu_2008_03ggs.dat         8
+NA      11800.    osu_2008_03ggs.dat         9
+MG       5300.    osu_2008_03ggs.dat        10
+CL       1216.    Semenov PHD               11
+P        1549.    Semenov PHD               12
+C2       1600.    osu_2008_03ggs.dat        13
+CCL      2509.    Semenov PHD               14
+CH        925.    osu_2008_03ggs.dat        15
+CLO      5300.    Semenov PHD               16
+CN       1600.    osu_2008_03ggs.dat        17
+CO       1150.    osu_2008_03ggs.dat        18
+CP       1950.    Semenov PHD               19
+CS       1900.    osu_2008_03ggs.dat        20
+H2         23.    osu_2008_03ggs.dat        21
+HCL      1823.    Semenov PHD               22
+HS       1450.    osu_2008_03ggs.dat        23
+MGH      5750.    osu_2008_03ggs.dat        24
+N2       1000.    osu_2008_03ggs.dat        25
+NAH     12300.    osu_2008_03ggs.dat        26
+NH       2380.    osu_2008_03ggs.dat        27
+NO       1600.    osu_2008_03ggs.dat        28
+NS       1900.    osu_2008_03ggs.dat        29
+O2       1000.    osu_2008_03ggs.dat        30
+OH       2850.    osu_2008_03ggs.dat        31
+PH       1599.    Semenov PHD               32
+PN       2249.    Semenov PHD               33
+PO       2349.    Semenov PHD               34
+S2       2200.    osu_2008_03ggs.dat        35
+SIC      3500.    osu_2008_03ggs.dat        36
+SIH      3150.    osu_2008_03ggs.dat        37
+SIN      2105.    Semenov PHD               38
+SIO      3500.    osu_2008_03ggs.dat        39
+SIS      3800.    osu_2008_03ggs.dat        40
+SO       2600.    osu_2008_03ggs.dat        41
+C2H      2140.    osu_2008_03ggs.dat        42
+C2N      2400.    osu_2008_03ggs.dat        43
+C2S      2700.    osu_2008_03ggs.dat        44
+C3       2400.    osu_2008_03ggs.dat        45
+CCO      1950.    osu_2008_03ggs.dat        46
+CCP      2762.    Semenov PHD               47
+CH2      1050.    osu_2008_03ggs.dat        48
+CO2      2580.    osu_2008_03ggs.dat        49
+H2O      5700.    osu_2008_03ggs.dat        50
+H2S      2740.    osu_2008_03ggs.dat        51
+HCN      2050.    osu_2008_03ggs.dat        52
+HCO      1600.    osu_2008_03ggs.dat        53
+HCP      1952.    Semenov PHD               54
+HCS      2350.    osu_2008_03ggs.dat        55
+HCSI     8599.    Semenov PHD               56
+HNC      2050.    osu_2008_03ggs.dat        57
+HNO      2050.    osu_2008_03ggs.dat        58
+HNSI     8699.    Semenov PHD               59
+HPO      2399.    Semenov PHD               60
+HS2      2650.    osu_2008_03ggs.dat        61
+N2O      2290.    Semenov PHD               62
+NAOH    14700.    osu_2008_03ggs.dat        63
+NH2      3960.    osu_2008_03ggs.dat        64
+NO2      1855.    Semenov PHD               65
+O2H      3650.    osu_2008_03ggs.dat        66
+OCN      2400.    osu_2008_03ggs.dat        67
+OCS      2890.    osu_2008_03ggs.dat        68
+PH2      1649.    Semenov PHD               69
+SIC2     2656.    Semenov PHD               70
+SIH2     3600.    osu_2008_03ggs.dat        71
+SINC     2705.    Semenov PHD               72
+SIO2     2726.    Semenov PHD               73
+SO2      3410.    osu_2008_03ggs.dat        74
+C2H2     2590.    osu_2008_03ggs.dat        75
+C3H      2940.    osu_2008_03ggs.dat        76
+C3N      3200.    osu_2008_03ggs.dat        77
+C3O      2750.    osu_2008_03ggs.dat        78
+C3P      3245.    Semenov PHD               79
+C3S      3500.    osu_2008_03ggs.dat        80
+C4       3200.    osu_2008_03ggs.dat        81
+CH3      1180.    osu_2008_03ggs.dat        82
+H2CN     2400.    osu_2008_03ggs.dat        83
+H2CO     2050.    osu_2008_03ggs.dat        84
+H2CS     2700.    osu_2008_03ggs.dat        85
+H2O2     5700.    osu_2008_03ggs.dat        86
+H2S2     3100.    osu_2008_03ggs.dat        87
+H2SIO    6956.    Semenov PHD               88
+HCCP     3257.    Semenov PHD               89
+NH3      5530.    osu_2008_03ggs.dat        90
+SIC2H    2656.    Semenov PHD               91
+SIC3     3206.    Semenov PHD               92
+SICH2    2106.    Semenov PHD               93
+SIH3     4050.    osu_2008_03ggs.dat        94
+C2H2N    4230.    osu_2008_03ggs.dat        95
+C2H2O    2200.    osu_2008_03ggs.dat        96
+C2H3     3040.    osu_2008_03ggs.dat        97
+C3H2     3390.    osu_2008_03ggs.dat        98
+C3H4     4290.    osu_2008_03ggs.dat        99
+C4H      3740.    osu_2008_03ggs.dat       100
+C4H4     5090.    osu_2008_03ggs.dat       101
+C4N      4000.    osu_2008_03ggs.dat       102
+C4P      3452.    Semenov PHD              103
+C4S      4300.    osu_2008_03ggs.dat       104
+C5       4000.    osu_2008_03ggs.dat       105
+CH2O2    5570.    osu_2008_03ggs.dat       106
+CH2PH    2471.    Semenov PHD              107
+CH3N     2850.    osu_2008_03ggs.dat       108
+CH4      1300.    osu_2008_03ggs.dat       109
+HCNC2    3650.    HCN+C2                   110
+HC2NC    3650.    H+C2N+C                  111
+HC3N     4580.    osu_2008_03ggs.dat       112
+HNC3     3650.    HNC+C2                   113
+NH2CN    3200.    N+H2CN                   114
+SIC2H2   2706.    Semenov PHD              115
+SIC3H    3256.    Semenov PHD              116
+SIC4     3806.    Semenov PHD              117
+SICH3    2156.    Semenov PHD              118
+SIH4     4500.    osu_2008_03ggs.dat       119
+C2H3N    4680.    osu_2008_03ggs.dat       120
+C2H4     3490.    osu_2008_03ggs.dat       121
+C3H3     3840.    osu_2008_03ggs.dat       122
+C4H2     4190.    osu_2008_03ggs.dat       123
+C5H      4540.    osu_2008_03ggs.dat       124
+C5N      4800.    osu_2008_03ggs.dat       125
+C6       4800.    osu_2008_03ggs.dat       126
+CH4O     5530.    osu_2008_03ggs.dat       127
+NH2CHO   5560.    osu_2008_03ggs.dat       128
+C2H4O    2450.    osu_2008_03ggs.dat       129
+C2H5     3940.    osu_2008_03ggs.dat       130
+C3H3N    5480.    osu_2008_03ggs.dat       131
+C4H3     4640.    osu_2008_03ggs.dat       132
+C5H2     4990.    osu_2008_03ggs.dat       133
+C6H      5340.    osu_2008_03ggs.dat       134
+C7       5600.    osu_2008_03ggs.dat       135
+CH5N     6580.    osu_2008_03ggs.dat       136
+HC5N     6180.    osu_2008_03ggs.dat       137
+C6H2     5790.    osu_2008_03ggs.dat       138
+C7H      6140.    osu_2008_03ggs.dat       139
+C7N      6400.    osu_2008_03ggs.dat       140
+C8       6400.    osu_2008_03ggs.dat       141
+CH3C3N   6480.    osu_2008_03ggs.dat       142
+HCOOCH3  6300.    osu_2008_03ggs.dat       143
+C2H5OH   6580.    osu_2008_03ggs.dat       144
+C7H2     6590.    osu_2008_03ggs.dat       145
+C8H      6940.    osu_2008_03ggs.dat       146
+C9       7200.    osu_2008_03ggs.dat       147
+CH3C4H   5890.    osu_2008_03ggs.dat       148
+CH3OCH3  3150.    osu_2008_03ggs.dat       149
+HC7N     7780.    osu_2008_03ggs.dat       150
+C2H6CO   2820.     Semenov PHD             151
+C8H2     7390.    osu_2008_03ggs.dat       152
+C9H      7740.    osu_2008_03ggs.dat       153
+C10      8000.    osu_2008_03ggs.dat       154
+C9N      8000.    osu_2008_03ggs.dat       155
+CH3C5N   7880.    osu_2008_03ggs.dat       156
+C9H2     8190.    osu_2008_03ggs.dat       157
+CH3C6H   7490.    osu_2008_03ggs.dat       158
+HC9N     9380.    osu_2008_03ggs.dat       159
+CH3C7N   9480.    osu_2008_03ggs.dat       160
+C6H6     7590.    osu_2008_03ggs.dat       161
+O3       1800.    osu_2008_03ggs.dat       162
+FEH      4650.    osu_2008_03ggs.dat       163
+HNCO     2850.    osu_2008_03ggs.dat       164
+HC2O     2400.    osu_2008_03ggs.dat       165
+HCCN     3780.    osu_2008_03ggs.dat       166
+HC3O     3200.    osu_2008_03ggs.dat       167
+MGH2     6200.    osu_2008_03ggs.dat       168
+N2H2     4760.    osu_2008_03ggs.dat       169
+CHNH     3300.    osu_2008_03ggs.dat       170
+H2C3O    3650.    osu_2008_03ggs.dat       171
+H2C3N    5030.    osu_2008_03ggs.dat       172
+H2C5N    6630.    osu_2008_03ggs.dat       173
+H2C7N    8230.    osu_2008_03ggs.dat       174
+H2C9N    9830.    osu_2008_03ggs.dat       175
+NH2OH    6810.    osu_2008_03ggs.dat       176
+CH2OH    5080.    osu_2008_03ggs.dat       177
+C5H3     5440.    osu_2008_03ggs.dat       178
+H3C5N    7080.    osu_2008_03ggs.dat       179
+C6H3     6240.    osu_2008_03ggs.dat       180
+C7H3     7040.    osu_2008_03ggs.dat       181
+H3C7N    8680.    osu_2008_03ggs.dat       182
+C8H3     7840.    osu_2008_03ggs.dat       183
+C9H3     8640.    osu_2008_03ggs.dat       184
+H3C9N   10300.    osu_2008_03ggs.dat       185
+CH2NH2   5010.    osu_2008_03ggs.dat       186
+CH3NH    3550.    osu_2008_03ggs.dat       187
+H4C3N    5930.    osu_2008_03ggs.dat       188
+C5H4     5890.    osu_2008_03ggs.dat       189
+C6H4     6690.    osu_2008_03ggs.dat       190
+C7H4     7490.    osu_2008_03ggs.dat       191
+C8H4     8290.    osu_2008_03ggs.dat       192
+C9H4     9090.    osu_2008_03ggs.dat       193
+H5C3N    6380.    osu_2008_03ggs.dat       194
+C2H6     4390.    osu_2008_03ggs.dat       195
