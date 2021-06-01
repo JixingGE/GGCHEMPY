@@ -65,7 +65,7 @@ E-mail: gejixing666@gmail.com
 # Benchmark with the five models of Semenov et al., (2010):
 <img src="benchmark.png" alt="benchmark" style="width:120px;"/>
 
-***Dashed line***: GGCHEMPY
+***Solid line***: GGCHEMPY
 
 ***Points***: model of Semenov et al., (2010).
 
