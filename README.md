@@ -63,7 +63,9 @@ E-mail: gejixing666@gmail.com
     ```
     See more in examples.py. 
 # Benchamrk with the five models of Semenov et al., (2010):
-![benchmark](benchmark.png)
+<img src="benchmark.png" alt="benchmark" style="width:200px;"/>
+Dashed line: GGCHEMPY
+Points: model of Semenov et al., (2010).
 
 # References:
     <1> for basic rate equation method:
