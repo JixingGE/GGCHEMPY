@@ -26,41 +26,8 @@ E-mail: gejixing666@gmail.com
     python setup.py install
     <2> Prepare your input files. See (2).
     <3> Run models. 
-    
-    Example:
-    ```python
-    ### Use the GUI to set model:
-    from src.ggchemGUI import *
-    app = QApplication(sys.argv)
-    ex = GGCHEMGUI()
-    sys.exit(app.exec_())
-    
-    ### Python script
-    from src.ggchemlib import *
-    GGCHEM={}
-    modelnames = ['TMC1','HOTCORE','DISK1','DISK2','DISK3']
-
-    ### define common parameters:
-    ggpars.d2gmr = 0.01
-    ggpars.ti = 1.0
-    ggpars.tf = 1.0e+9
-    ggpars.ggfiles= ['in/network2.txt','in/ed.txt','in/iabun.txt']
-    gas.Zeta = 1.3e-17
-    dust.surface.Rdb=0.77
-    
-    ### the five static models:
-    pars={}        # nH,     Tgas, Av,   chi,  Tdust
-    pars['TMC1']   =[2.00e4, 10.0, 10.0, 1.0,  10.0]
-    pars['HOTCORE']=[2.00e7, 100.0, 10.0, 1.0, 100.0]
-    pars['DISK1']  =[5.41e8, 11.4, 37.1, 428.3, 11.4]
-    pars['DISK2']  =[2.59e7, 45.9, 1.94, 393.2, 45.9]
-    pars['DISK3']  =[3.67e6, 55.2, 0.22, 353.5, 55.2]
-    
-    for model in modelnames:
-        gas.nH, gas.T, gas.Av, gas.Chi, dust.T = pars[model]
-        GGCHEM[model] = ggchem.run(model) 
-    
-    ```
+<img src="code-and-gui.png" alt="code ang GUI" style="width:120px;"/>
+  
     See more in examples.py. 
 # Benchmark with the five models of Semenov et al., (2010):
 <img src="benchmark.png" alt="benchmark" style="width:120px;"/>
