@@ -53,7 +53,9 @@ https://gitfront.io/r/Jixing-Ge/7b3c064da2aa89e7c1d34633a426340610338338/ggchemp
 
     <4> for reaction network:
     Semenov D., et al., 2010, A&A, 522, A42
-  ![KIDA database:](http://kida.astrophy.u-bordeaux.fr/)
-  ![UDFA database:](http://udfa.ajmarkwick.net/)
+    
+  ![KIDA database](http://kida.astrophy.u-bordeaux.fr/)
+  
+  ![UDFA database](http://udfa.ajmarkwick.net/)
 
 [GitFront page](https://gitfront.io/r/Jixing-Ge/7b3c064da2aa89e7c1d34633a426340610338338/ggchempy/)
