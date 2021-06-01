@@ -2,7 +2,9 @@
 # Introduction:
 
 GGCHEMPY: Gas-Grain CHEMical code for interstellar medium in Python3.
+
 Author: Jixing Ge
+
 E-mail: gejixing666@gmail.com
 
 
@@ -60,6 +62,8 @@ E-mail: gejixing666@gmail.com
     
     ```
     See more in examples.py. 
+# Benchamrk with the five models of Semenov et al., (2010):
+![benchmark](benchmark.png)
 
 # References:
     <1> for basic rate equation method:
