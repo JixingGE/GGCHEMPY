@@ -34,7 +34,7 @@ E-mail: gejixing666@gmail.com
 
 ***Solid line***: GGCHEMPY
 
-***Points***: model of Semenov et al., (2010).
+***Point***: model of Semenov et al., (2010).
 
 # CPU times (s):
 <img src="cputime.png" alt="cpu time" style="width:120px;"/>
