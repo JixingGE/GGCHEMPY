@@ -39,6 +39,9 @@ E-mail: gejixing666@gmail.com
 # CPU times (s):
 <img src="cputime.png" alt="cpu time" style="width:120px;"/>
 
+# Note:
+There is a file "in/network2.txt" with updated reactions of HNCO.
+
 # References:
     <1> for basic rate equation method:
     Hasegawa T. I., Herbst E., Leung C. M., 1992, ApJS, 82, 167
