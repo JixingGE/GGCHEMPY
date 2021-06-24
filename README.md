@@ -17,6 +17,7 @@ E-mail: gejixing666@gmail.com
     scipy
     matplotlib
     progressbar
+    pyqt5                 -> for using GUI
     pyfiglet (optional)   -> to create ASCII art text of "GGCHEM"
 
 
