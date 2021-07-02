@@ -23,7 +23,7 @@ class gas:
     T=10.0      # temperature (K)
     Av=10.0     # visual extinction (mag)
     Chi=1.0     # radiation field (chi0)
-    Zeta=1.0e-17# cosmic ionization (s^-1)
+    Zeta=1.3e-17# cosmic ionization (s^-1)
     ### for collapsing core when iswitch.icollapse=1:
     nH0 = 3000.0 # initial density
     nH1 = 1e7    # final density
