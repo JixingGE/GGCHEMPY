@@ -1,4 +1,4 @@
-12    655   6065  # number of element, species and reactions
+12    655   6067  # number of element, species and reactions
 H        1          #<- element + atom mass (amu)                                                
 HE       4                                                                      
 C        12                                                                    
@@ -667,7 +667,9 @@ JC8H4      0  4  0  8  0  0  0  0  0  0  0  0  0                                
 JC9H4      0  4  0  9  0  0  0  0  0  0  0  0  0                                                                * 653*    
 JH5C3N     0  5  0  3  1  0  0  0  0  0  0  0  0                                                                * 654*    
 JC2H6      0  6  0  2  0  0  0  0  0  0  0  0  0                                                                * 655*    
-Reaction list: reactant(3) + products(5) + alpha + beta + gamma + ITYPE                                             
+Reaction list: reactant(3) + products(5) + alpha + beta + gamma + ITYPE     
+H       H       GRAIN0  H2      GRAIN0                           4.95e-17 5.00e-01 0.00e+00 0   1         *   1*
+H       H       GRAIN-  H2      GRAIN-                           4.95e-17 5.00e-01 0.00e+00 0   2         *   2*
 E       GRAIN0          GRAIN-                                   6.90E-15 5.00E-01 0.00E+00 0   3         *   3*
 C+      GRAIN-          C       GRAIN0                           4.90E-17 5.00E-01 0.00E+00 0   4         *   4*
 FE+     GRAIN-          FE      GRAIN0                           2.30E-17 5.00E-01 0.00E+00 0   5         *   5*
