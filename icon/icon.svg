@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   sodipodi:docname="icon3.svg"
+   inkscape:export-filename="/run/media/jixing/JXGe/JXGE/manjaro/Myworks/0MyCodes/ggchempy/icon/icon.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.2953002"
+     inkscape:cx="-5.0181417"
+     inkscape:cy="440.82445"
+     inkscape:window-width="1920"
+     inkscape:window-height="1003"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="图层 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#decd87;fill-opacity:0.99;stroke:#fd7000;stroke-width:4.465;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path24763"
+       cx="72.507156"
+       cy="113.92075"
+       rx="21.583351"
+       ry="21.867105" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.3333px;line-height:1.25;font-family:'STIX MathJax DoubleStruck';-inkscape-font-specification:'STIX MathJax DoubleStruck Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="53.605011"
+       y="130.4321"
+       id="text37674"><tspan
+         sodipodi:role="line"
+         id="tspan37672"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.3333px;font-family:'STIX MathJax DoubleStruck';-inkscape-font-specification:'STIX MathJax DoubleStruck Bold';stroke-width:0.264583"
+         x="53.605011"
+         y="130.4321">G</tspan></text>
+  </g>
+</svg>
