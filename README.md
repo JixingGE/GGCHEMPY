@@ -27,7 +27,7 @@ E-mail: gejixing666@gmail.com
     python setup.py install
     <2> Prepare your input files. See (2).
     <3> Run models. 
-<img src="code-and-gui.png" alt="code ang GUI" style="width:120px;"/>
+<img src="figures/code-and-gui.png" alt="code ang GUI" style="width:120px;"/>
   
     See more in examples.py. 
 # Benchmark with the five models of Semenov et al., (2010):
@@ -38,7 +38,7 @@ E-mail: gejixing666@gmail.com
 ***Point***: model of Semenov et al., (2010).
 
 # CPU times (s):
-<img src="cputime.png" alt="cpu time" style="width:120px;"/>
+<img src="figures/cputime.png" alt="cpu time" style="width:120px;"/>
 
 # Note:
 There is a file "in/network2.txt" with updated reactions of HNCO.
