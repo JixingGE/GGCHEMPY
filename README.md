@@ -31,7 +31,7 @@ E-mail: gejixing666@gmail.com
   
     See more in examples.py. 
 # Benchmark with the five models of Semenov et al., (2010):
-<img src="benchmark.png" alt="benchmark" style="width:120px;"/>
+<img src="figures/benchmark.png" alt="benchmark" style="width:120px;"/>
 
 ***Solid line***: GGCHEMPY
 
