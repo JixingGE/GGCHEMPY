@@ -25,7 +25,7 @@ E-mail: gejixing666@gmail.com
     <1> install GGCHEM:
     python setup.py build
     python setup.py install
-    <2> Prepare your input files.
+    <2> Prepare your models.
     <3> Run models. 
 <img src="figures/code-and-gui.png" alt="code ang GUI" style="width:120px;"/>
   
