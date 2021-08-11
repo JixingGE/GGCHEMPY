@@ -44,7 +44,7 @@ E-mail: gejixing666@gmail.com
 There is a file "in/network2.txt" with updated reactions of HNCO.
 
 # For citing GGCHEMPY:
-Coming soon.
+A paper has been submitted. A link is coming soon.
 
 # References:
     <1> for basic rate equation method:
