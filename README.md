@@ -70,8 +70,8 @@ This work is accomplished with the support from the Chinese Academy of Sciences
 (CAS) through a Postdoctoral Fellowship administered by the CAS South America Center for Astronomy
 (CASSACA) in Santiago, Chile. 
 
-JG thanks Dr. Jinhua He and Dr. Tie Liu for their constructive suggestions
-which significantly improved this paper
+Jixing  thanks Dr. Jinhua He and Dr. Tie Liu for their constructive suggestions
+on improving the code and the paper
 
 # Links:
 [KIDA database](http://kida.astrophy.u-bordeaux.fr/)
