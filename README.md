@@ -46,7 +46,9 @@ Python benchmark.py
 
 # Note:
 There is a file "in/network2.txt" with updated reactions of HNCO.
-Reactive desorption is only available for this updated reaction network.
+
+Reactive desorption is only available for this updated reaction network since that 
+enthalpies taken from KIDA database were only added to it.
 
 # For citing GGCHEMPY:
 A paper has been submitted. A link is coming soon.
