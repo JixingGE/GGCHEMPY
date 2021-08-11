@@ -27,9 +27,13 @@ E-mail: gejixing666@gmail.com
     python setup.py install
     <2> Prepare your models.
     <3> Run models. 
+    
+For example, please run benchmark.py by typing
+```
+Python benchmark.py
+```
 <img src="figures/code-and-gui.png" alt="code ang GUI" style="width:120px;"/>
   
-    See more in examples.py. 
 # Benchmark with the five models of Semenov et al., (2010):
 <img src="figures/benchmark.png" alt="benchmark" style="width:120px;"/>
 
