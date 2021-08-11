@@ -173,7 +173,7 @@ def reactive_desorption_2016(dtH,Natoms,mass,Ebind,EM):
 
 def reactive_desorption_2007(b,Natoms,Ebind,aa=0.01):
     """
-    Ref: Garrod et al., 2007
+    Ref: Garrod et al.,(2007), A&A 467, 1103–1115 
     b  = energy released by reaction (KJ/mol)
     aa = 0.01, 0.03 or 0.1
     EXAMPLE:
