@@ -28,7 +28,7 @@ E-mail: gejixing666@gmail.com
     <2> Prepare your models.
     <3> Run models. 
     
-For example, please run benchmark.py by typing
+For example, please type the following command on your terminal:
 ```
 Python benchmark.py
 ```
