@@ -64,6 +64,16 @@ A paper has been submitted. A link is coming soon.
     <4> for reaction network:
     Semenov D., et al., 2010, A&A, 522, A42
     
+# Acknowledgements
+
+This work is accomplished with the support from the Chinese Academy of Sciences
+(CAS) through a Postdoctoral Fellowship administered by the CAS South America Center for Astronomy
+(CASSACA) in Santiago, Chile. 
+
+JG thanks Dr. Jinhua He and Dr. Tie Liu for their constructive suggestions
+which significantly improved this paper
+
+# Links:
 [KIDA database](http://kida.astrophy.u-bordeaux.fr/)
   
 [UDFA database](http://udfa.ajmarkwick.net/)
