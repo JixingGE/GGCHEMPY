@@ -590,9 +590,9 @@ class ggchempy(object):
         numbt = np.zeros((self.ggpars.nt, self.ggpars.ns))
         
         widgets = [
-        '\x1b[33mggchem:\x1b[39m',
+        'ggchempy:',
         progressbar.Percentage(),
-        progressbar.Bar(marker='\x1b[32m#\x1b[39m'),
+        progressbar.Bar(marker='#'),
         ]
         
             
