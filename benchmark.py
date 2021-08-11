@@ -7,8 +7,6 @@ gg = ggchempy
 useGUI=False       ## If True, PyQt5 is needed.
 runBenchmark=True  ## If True, NAUTILUS result will be downloaded from the bechmarking webpage.
                    ## Benchmark files will be saved into "benchmark/"
-runCollapse=False
-runAnalysis=False  ## If True, analysis mode is activated. See the end of this script.
 
 ### Main code:
 if useGUI:
@@ -38,22 +36,6 @@ else:
     for model in modelnames:
         gg.gas.nH, gg.gas.T, gg.gas.Av, gg.gas.Chi, gg.dust.T = pars[model]
         GGCHEM[model] = gg.run(model)  ## diectory "out" will be created to save model. e.g. "out/TMC1.dat"
-    
-
-    ################################## the collapse model:
-    if runCollapse:
-        gg.iswitch.icollapse=1
-        gg.iswitch.iSS=1       ## Self-Shielding of H2 and CO. 0---OFF, 1---ON
-        gg.iswitch.iNTD=1      ## Non-Thermal Desorption. 0---OFF, 1---ON (Garrod et al., 2007)
-        gg.gas.nH0 = 3000.0    ## Initial density (cm^-3)
-        gg.gas.nH1 = 1.0e+7    ## Final density (cm^-3)
-        gg.gas.Av0 = 2.0       ## Initial Av0 (mag)
-        gg.gas.Chi = 1.0       
-        gg.gas.T  = 10.0
-        gg.dust.T = 10.0
-        gg.dust.surface.Rdb=0.5
-        gg.ggpars.nt = 3000    ## Large number is needed to make a smooth evolution.
-        gg.run('COLLAPSE')
 
     if runBenchmark:
         import shutil
@@ -130,16 +112,5 @@ else:
         pl.savefig(dir_bench+'/benchmark.pdf')
         print("See ",dir_bench+'/benchmark.pdf')
    
-
-        if runAnalysis:
-            ### For analysis of a species at a given age in the TMC1 model:
-            init_ggchem()
-            compute_reaction_rate_coefficients()
-            dc = loadgg('out/TMC1.dat')
-            fout = open('out/TMC1_analysis.out','w')
-            age=5e5
-            analyze(dc, spec='CO', age=age, fout=fout)
-            analyze(dc, spec='N2H+', age=age, fout=fout)
-            fout.close()
 
 
