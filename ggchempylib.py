@@ -6,7 +6,7 @@ import time
 import progressbar
 import os
 from ggfuncs import *
-from pyqtgraph import PlotWidget
+#from pyqtgraph import PlotWidget
 import pyqtgraph as pq
 
 from PyQt5.QtWidgets import (QWidget, QMainWindow, QTextEdit, 
