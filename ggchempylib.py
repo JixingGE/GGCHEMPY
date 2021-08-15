@@ -276,6 +276,27 @@ class ggchempy(object):
         for i in range(self.ggpars.ne+self.ggpars.ns+1+1+1, self.ggpars.ne+1+1+1+self.ggpars.ns+self.ggpars.nr, 1):
             Lx = network[i]
             
+            Latom = np.zeros(self.ggpars.ne)
+            Ratom = np.zeros(self.ggpars.ne)
+            Lcharge, Rcharge = 0, 0
+            
+            for j in range(0, nrnp, 1):
+                reac = Lx[j*nstr : (j+1)*nstr].strip()
+                if reac=='':
+                    self.reactions.idx[ii][j]=-1
+                self.reactions.spec[ii,j]=reac.strip()
+                if reac!="":
+                    self.reactions.idx[ii][j]= self.species.idx[reac.strip()]
+                    
+                if (j<3 and self.reactions.idx[ii][j]!=-1):
+                    Lcharge += self.species.charge[self.reactions.idx[ii][j]]
+                    Latom[:] += self.species.atoms[self.reactions.idx[ii][j]][:]
+                    
+                elif (j>=3 and self.reactions.idx[ii][j]!=-1):
+                    Rcharge +=  self.species.charge[self.reactions.idx[ii][j]]
+                    Ratom[:] += self.species.atoms[self.reactions.idx[ii][j]][:]
+                    
+            """
             Latom = np.zeros(self.ggpars.ne,dtype='int')
             Ratom = np.zeros(self.ggpars.ne,dtype='int')
             Lcharge, Rcharge = 0, 0
@@ -297,7 +318,8 @@ class ggchempy(object):
                                 Ratom[m]= Ratom[m]+ self.species.atoms[k][m]
                                 Rcharge = Rcharge + self.species.charge[k]
                 if reac=='': self.reactions.idx[ii][j]=-1
-                
+            """
+            
             for m in range(0, self.ggpars.ne, 1):
                 if Latom[m]!=Ratom[m]:
                     print(ii,Latom)
