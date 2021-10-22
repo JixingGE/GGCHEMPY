@@ -69,7 +69,7 @@ https://arxiv.org/abs/2110.11117
     Ge J., Mardones D., Inostroza N., Peng Y., 2020, MNRAS, 497, 3306
     Ge J. X., et al., 2020, ApJ, 891, 36
 
-    <4> for reaction network:
+    <4> for reaction network and benchmark:
     Semenov D., et al., 2010, A&A, 522, A42
     
 # Acknowledgements
