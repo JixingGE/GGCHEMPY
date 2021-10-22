@@ -51,7 +51,8 @@ Reactive desorption is only available for this updated reaction network since th
 enthalpies taken from KIDA database were only added to it.
 
 # For citing GGCHEMPY:
-A paper has been submitted. A link is coming soon.
+A paper has been acceped for publication in RAA. The arXiv link is
+https://arxiv.org/abs/2110.11117
 
 # References:
     <1> for basic rate equation method:
