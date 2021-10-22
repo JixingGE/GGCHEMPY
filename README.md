@@ -51,6 +51,8 @@ Reactive desorption is only available for this updated reaction network since th
 enthalpies taken from KIDA database were only added to it.
 
 # For citing GGCHEMPY:
+https://iopscience.iop.org/article/10.1088/1674-4527/ac321e
+
 The arXiv link of the paper is
 https://arxiv.org/abs/2110.11117
 
