@@ -587,7 +587,7 @@ class ggchempy(object):
         self.gas.print_attributes(tofile=fileout)
         self.dust.print_attributes(tofile=fileout)
         self.ggpars.print_attributes(tofile=fileout)
-        print('--------------- time evolution-------------------', file=fileout)
+        print('--------------- evolution-------------------', file=fileout)
         
         fmt = '%10s '*(self.ggpars.ns+1)            
         print( fmt%('time',*self.species.spec), file=fileout )
