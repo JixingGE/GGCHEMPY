@@ -51,7 +51,13 @@ Reactive desorption is only available for this updated reaction network since th
 enthalpies taken from KIDA database were only added to it.
 
 # For citing GGCHEMPY:
-The bibtex:
+
+https://iopscience.iop.org/article/10.1088/1674-4527/ac321e
+
+https://ui.adsabs.harvard.edu/abs/2021arXiv211011117G/abstract
+
+***The bibtex***
+
 @article{Ge_2022,
 	doi = {10.1088/1674-4527/ac321e},
 	url = {https://doi.org/10.1088/1674-4527/ac321e},
@@ -67,8 +73,7 @@ The bibtex:
 	abstract = {In this paper, we present a new gas-grain chemical code for interstellar clouds written in pure Python (GGCHEMPY (GGCHEMPY is available on https://github.com/JixingGE/GGCHEMPY)). By combining with the high-performance Python compiler Numba, GGCHEMPY is as efficient as the Fortran-based version. With the Python features, flexible computational workflows and extensions become possible. As a showcase, GGCHEMPY is applied to study the general effects of three-dimensional projection on molecular distributions using a two-core system which can be easily extended for more complex cases. By comparing the molecular distribution differences between two overlapping cores and two merging cores, we summarized the typical chemical differences such as N2H+, HC3N, C2S, H2CO, and C2H, which can be used to interpret 3D structures in molecular clouds.}
 }
 
-https://iopscience.iop.org/article/10.1088/1674-4527/ac321e
-https://ui.adsabs.harvard.edu/abs/2021arXiv211011117G/abstract
+
 
 # References:
     <1> for basic rate equation method:
