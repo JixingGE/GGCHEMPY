@@ -37,9 +37,13 @@ Python benchmark.py
 # Analysis tool
 Analysis_tool.py provides a GUI to analyze a given species at a age. See GIF.
 
+Feature: each species in the textlist is clickable to be analyzed.
+
 Just type "python Analysis_tool.py" on your termical and press "ENTER" to use it.
 
-<img src="Analysis_tool.gif" alt="benchmark" style="width:700px;"/>
+
+
+<img src="Analysis_tool.gif" alt="benchmark" style="width:900px;"/>
 
 # Benchmark with the five models of Semenov et al., (2010):
 <img src="figures/benchmark.png" alt="benchmark" style="width:500px;"/>
