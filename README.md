@@ -17,7 +17,9 @@ E-mail: gejixing666@gmail.com
     scipy
     matplotlib
     progressbar
+    platform
     pyqt5                 -> for using GUI
+    networkx              -> for using Analysis_tool.py in GUI
     pyfiglet (optional)   -> to create ASCII art text of "GGCHEM"
 
 
