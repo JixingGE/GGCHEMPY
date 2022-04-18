@@ -36,8 +36,11 @@ Python benchmark.py
 
 # Analysis tool
 Analysis_tool.py provides a GUI to analyze a given species at a age. See GIF.
+
 Just type "python Analysis_tool.py" on your termical and press "ENTER" to use it.
-![](Analysis.gif)
+
+![](Analysis_tool.gif)
+<img src="Analysis_tool.gif" alt="benchmark" style="width:500px;"/>
 
 # Benchmark with the five models of Semenov et al., (2010):
 <img src="figures/benchmark.png" alt="benchmark" style="width:500px;"/>
@@ -48,7 +51,7 @@ Just type "python Analysis_tool.py" on your termical and press "ENTER" to use it
 
 
 # CPU times (s):
-<img src="figures/cputime.png" alt="cpu time" style="width:120px;"/>
+<img src="figures/cputime.png" alt="cpu time" style="width:500px;"/>
 
 # Note:
 There is a file "in/network2.txt" with updated reactions of HNCO.
