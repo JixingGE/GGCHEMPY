@@ -14,6 +14,16 @@ rates        |  rates         |
              |                |
 ------------------------------|
 
+Sorry for the delayed reply.
+I do not frequenly check the jxg@uchile.cl
+This is my gmail.
+I would like to contribute a talk in July or Agust.
+However, we are encouraged to public places 
+due to the current rules from my current affilation (CASSACA).
+Is it possible to give the talk online if I cann't get there at that time?
+
+Best regards,
+jixing
 """
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.Qt import Qt
@@ -32,6 +42,7 @@ import os
 #from pyvalem.formula import Formula
 import networkx as nkx
 import platform
+import numba
 
 default_Rdb = ggchempy.dust.surface.Rdb
 
@@ -95,6 +106,63 @@ def format_reaction(r8, outtype='text'):
         reac_click = reac_click[0:-3]
         return reac, reac_click
 
+@numba.jit(nopython=True)
+def analyze_numba(age, ns, nr, nt, timeyr, isp, ireac_map, rc_t, sp_numb):
+    """
+    Called by analyze() by passing numpy.array().
+    ns,nr,nt --- number of species, reactions, time steps
+    isp      --- index of species to be analyze [int]
+    isp_map  --- index map of all species       [array(dtype='int')]
+    ireac_map--- index map of all reactions     [array(dtype='int')]
+    rc_t     --- rc as function of t (time)     [array(dtyle='float')]
+                 rc --- reaction rate coefficient
+    sp_numb  --- number density of all species  [array(dtype='float')]
+    """
+    ratet = np.zeros(nt)
+    idx_for = [] #np.empty(0, dtype='int')
+    rates_for = np.zeros((nr, nt))
+    rate_at_age_for = [] #np.array([])
+    idx_des = [] #np.empty(0, dtype='int')
+    rates_des = np.zeros((nr, nt))
+    rate_at_age_des = [] #np.array([])  
+    
+    ### compute all rates at each time step  
+    nfor, ndes=0,0      
+    for ir in np.arange(nr):
+        isp1 = ireac_map[ir,0]
+        isp2 = ireac_map[ir,1]
+        for it in np.arange(nt):
+            if isp2!=-1:
+                ratet[it] = rc_t[it,ir]* sp_numb[isp1,it] * sp_numb[isp2,it]
+            else:
+                ratet[it] = rc_t[it,ir]* sp_numb[isp1,it]
+    
+    #for ir in np.arange(0,nr,1):    
+        ifound=0
+        for irp in range(8):
+            if irp<=2 and isp==ireac_map[ir,irp]: 
+                ifound=1
+            elif irp>2 and isp==ireac_map[ir,irp]: 
+                ifound=2
+            
+        if ifound==1:
+            ### des 
+            rates_des[ndes:] = ratet
+            idx_des.append(ir)
+            rate_at_age_des.append(np.interp(age, timeyr, ratet))
+            ndes+=1
+        elif ifound==2:
+            ### for
+            rates_for[nfor,:] = ratet
+            idx_for.append(ir)
+            rate_at_age_for.append(np.interp(age, timeyr, ratet))
+            nfor+=1
+            
+    rate_at_age_des = np.array(rate_at_age_des)
+    rate_at_age_for = np.array(rate_at_age_for)    
+    #print(rates_for, rates_des)
+    return rate_at_age_for, rate_at_age_des, rates_for, rates_des, idx_for, idx_des
+           
 # To handle model file from ggchempy and to do analysis of a given species at a age.
 class ggmodel(object):
     def __init__(self):
@@ -148,64 +216,93 @@ class ggmodel(object):
             ggchempy.dust.surface.Rdb=self.default_Rdb
         ggchempy.init_ggchem()
         ggchempy.compute_reaction_rate_coefficients()
-        
-    def analyze(self, sp, age, ntop=5):
+            
+    def analyze(self, sp, age, ntop=5, mode='numba'):
         self.sp = sp
         self.age= age
         print('Analyzing %s at age of %10.3e'%(self.sp, self.age) )
         
-        
+        ns = ggchempy.ggpars.ns
+        nr = ggchempy.ggpars.nr
+        nt = ggchempy.ggpars.nt
         sp_idx = ggchempy.species.idx[sp]
         
         reactions = ggchempy.reactions
         
-        #reac_idx= np.array([])
-        idx_for = np.array([])
-        rates_for = np.zeros((ggchempy.ggpars.nr, ggchempy.ggpars.nt))
-        rate_at_age_for = np.array([])
-        idx_des = np.array([])
-        rates_des = np.zeros((ggchempy.ggpars.nr, ggchempy.ggpars.nt))
-        rate_at_age_des = np.array([])
-        
-        nfor=0
-        ndes=0
-        for ir in range(ggchempy.ggpars.nr):
-            ### formation:
-            if sp_idx in reactions.idx[ir,3:]:
-                #reac_idx = np.append(reac_idx, ir)
-                rate=0.0
-                if reactions.idx[ir,1]==-1:
-                    numb1 = self.model[reactions.spec[ir,0]]
-                    rate = ggchempy.reactions.rc[ir] * numb1
-                else:
-                    numb1 = self.model[reactions.spec[ir,0]]
-                    numb2 = self.model[reactions.spec[ir,0]]
-                    rate = ggchempy.reactions.rc[ir] * numb1 * numb2
-                idx_for = np.append(idx_for,ir)
-                rates_for[nfor,:]=rate
-                rate_at_age_for = np.append(rate_at_age_for, np.interp(age, self.model['time'], rate) )
-                nfor+=1
-            ### destruction:
-            if sp_idx in reactions.idx[ir,0:3]:
-                #print(reactions.spec[ir,0:3])
-                rate=0.0
-                if reactions.idx[ir,1]==-1:
-                    numb1 = self.model[reactions.spec[ir,0]]
-                    rate = ggchempy.reactions.rc[ir] * numb1
-                else:
-                    numb1 = self.model[reactions.spec[ir,0]]
-                    numb2 = self.model[reactions.spec[ir,0]]
-                    rate = ggchempy.reactions.rc[ir] * numb1 * numb2
-                idx_des = np.append(idx_des, ir)
-                rates_des[ndes,:]=rate
-                rate_at_age_des = np.append(rate_at_age_des, np.interp(age, self.model['time'], rate) )
-                ndes+=1
+        if mode=='static':
+            #reac_idx= np.array([])
+            idx_for = np.array([])
+            rates_for = np.zeros((ggchempy.ggpars.nr, ggchempy.ggpars.nt))
+            rate_at_age_for = np.array([])
+            idx_des = np.array([])
+            rates_des = np.zeros((ggchempy.ggpars.nr, ggchempy.ggpars.nt))
+            rate_at_age_des = np.array([])
+            
+            nfor=0
+            ndes=0
+            for ir in range(ggchempy.ggpars.nr):
+                ### formation:
+                if sp_idx in reactions.idx[ir,3:]:
+                    #reac_idx = np.append(reac_idx, ir)
+                    rate=0.0
+                    if reactions.idx[ir,1]==-1:
+                        numb1 = self.model[reactions.spec[ir,0]]
+                        rate = ggchempy.reactions.rc[ir] * numb1
+                    else:
+                        numb1 = self.model[reactions.spec[ir,0]]
+                        numb2 = self.model[reactions.spec[ir,0]]
+                        rate = ggchempy.reactions.rc[ir] * numb1 * numb2
+                    idx_for = np.append(idx_for,ir)
+                    rates_for[nfor,:]=rate
+                    rate_at_age_for = np.append(rate_at_age_for, np.interp(age, self.model['time'], rate) )
+                    nfor+=1
+                ### destruction:
+                if sp_idx in reactions.idx[ir,0:3]:
+                    #print(reactions.spec[ir,0:3])
+                    rate=0.0
+                    if reactions.idx[ir,1]==-1:
+                        numb1 = self.model[reactions.spec[ir,0]]
+                        rate = ggchempy.reactions.rc[ir] * numb1
+                    else:
+                        numb1 = self.model[reactions.spec[ir,0]]
+                        numb2 = self.model[reactions.spec[ir,0]]
+                        rate = ggchempy.reactions.rc[ir] * numb1 * numb2
+                    idx_des = np.append(idx_des, ir)
+                    rates_des[ndes,:]=rate
+                    rate_at_age_des = np.append(rate_at_age_des, np.interp(age, self.model['time'], rate) )
+                    ndes+=1
+            
+        if mode=='numba':
+            ireac_map = ggchempy.reactions.idx
+            sp_numb = np.zeros((ns,nt)) 
+            for i in range(0, ns, 1):
+                sp_numb[i,:] = self.model[ggchempy.species.spec[i]]
+            
+            rc_t = np.zeros((nt,nr))    
+            for it in range(nt):
+                ## update parameters 
+                """
+                ggchempy.gas.nH = self.model['nH'][it]
+                gcghempy.gas.Av = self.model['Av'][it]
+                ggchempy.gas.T  = self.model['Tgas'][it]
+                ggchempy.dust.T = self.model['Tdust'][it]
+                ggchempy.dust.nd= self.model['GRAIN0'][it]
+                """
+                ggchempy.compute_reaction_rate_coefficients()
+                rc_t[it,:] = ggchempy.reactions.rc
+            
+            timeyr = self.model['time'].to_numpy()
+                    
+            rate_at_age_for, rate_at_age_des, rates_for, rates_des, idx_for, idx_des, \
+             = analyze_numba(age, ns, nr, nt, timeyr, sp_idx, ireac_map, rc_t, sp_numb)
+             
+            
         print( 'found ', np.size(rate_at_age_for), ' formation reactions.')
         print( 'found ', np.size(rate_at_age_des), ' destruction reactions.')
-        
+            
         percent_for_at_age = 100.0* rate_at_age_for/np.sum(rate_at_age_for)
         percent_des_at_age = 100.0* rate_at_age_des/np.sum(rate_at_age_des)
-        
+            
         rates_for = np.array(rates_for)
         rates_des = np.array(rates_des)
         ifor = np.argsort(rate_at_age_for)
