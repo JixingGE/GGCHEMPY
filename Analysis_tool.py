@@ -36,6 +36,7 @@ import platform
 default_Rdb = ggchempy.dust.surface.Rdb
 
 OS = platform.system()
+font_size=9
 if OS=='Linux': 
     font_size=9
     plt.rc('font', family='Times New Roman', size=font_size)
@@ -496,6 +497,10 @@ class Ui_MainWindow(object):
             self.mySubwindow=subwindow()
             self.mySubwindow.createWindow(1000, 600)
             
+            if OS=='Windows':
+                desktop=QtWidgets.QApplication.desktop()
+                self.mySubwindow.move( int(0.01*desktop.width()), int(0.1*desktop.height()))
+            
             xlim_temp = self.mpl_xlim.text().split('=')[1]
             xlim_temp = (xlim_temp.replace('(','').replace(')','')).split(',')
             xlim = [float(xlim_temp[0]), float(xlim_temp[1])]
@@ -721,10 +726,16 @@ if __name__=='__main__':
     if OS=='Darwin': 
         path = os.path.join(os.path.dirname(sys.modules[__name__].__file__), 'icon/icon_AT.png')
         app.setWindowIcon(QtGui.QIcon(path))
+    else:
+        app.setWindowIcon(QtGui.QIcon('icon/icon_AT.png'))
     mywindow = Window()
     MainWindow = QtWidgets.QMainWindow()
-    desktop=QtWidgets.QApplication.desktop()
-    mywindow.move(desktop.width(), desktop.height()) ### position on the screen.
+    if OS in ['Linux', 'Darwin']:
+        desktop=QtWidgets.QApplication.desktop()
+        mywindow.move(desktop.width(), desktop.height()) ### position on the screen.
+    else:
+        desktop=QtWidgets.QApplication.desktop()
+        mywindow.move( int(0.6*desktop.width()), int(0.1*desktop.height())) ### position on the screen.
     mywindow.show()
     sys.exit(app.exec_())    
 
