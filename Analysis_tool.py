@@ -14,16 +14,6 @@ rates        |  rates         |
              |                |
 ------------------------------|
 
-Sorry for the delayed reply.
-I do not frequenly check the jxg@uchile.cl
-This is my gmail.
-I would like to contribute a talk in July or Agust.
-However, we are encouraged to public places 
-due to the current rules from my current affilation (CASSACA).
-Is it possible to give the talk online if I cann't get there at that time?
-
-Best regards,
-jixing
 """
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.Qt import Qt
