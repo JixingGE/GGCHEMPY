@@ -3,16 +3,16 @@
 This script provides a GUI using pyqt5 to analyze a given species at a age.
 A subwindow will show a matplotlib plot of the species as follows:
 
-------------------------------|
-                              |
-Abundance as function of time |
-                              |
-------------------------------|
-             |                |
-Formation    |  Destruction   |
-rates        |  rates         |
-             |                |
-------------------------------|
+---------------------------------|
+                |                |
+Abundance as    | networkx       |
+function of time| graph          |
+---------------------------------|
+                |                |
+Formation       |  Destruction   |
+rates           |  rates         |
+                |                |
+---------------------------------|
 
 """
 from PyQt5 import QtCore, QtGui, QtWidgets
