@@ -2,7 +2,7 @@
 from scipy.interpolate import interp1d
 import numpy as np
 
-def H2_CO_self_shielding(specx,Av,xh2,xco,xkin):
+def H2_CO_self_shielding(specx,Chi,Av,xh2,xco,xkin):
     ###---------------------------------------------------------------------
     ### Ref: Lee et al., A&A, 311, 690-707
     ### Treat the H2 and CO self-shielding.
@@ -133,19 +133,19 @@ def H2_CO_self_shielding(specx,Av,xh2,xco,xkin):
             xk=xkold
         else:
             theta = interp1d(nh2,theta_nh2)(ncollh2)
-            xk    = ph2*theta
+            xk    = Chi*ph2*theta
         #print("(%s,' : self-shielding:',%10.3e,' =>',%10.3e)"%(specx,xkold,xk))
     elif specx=='CO':
         theta1=0.0; theta2=0.0; theta3=0.0
-        ncollh2=(Av*pnx)*xh2
-        ncollco=(Av*pnx)*xco
+        ncollh2=(Av/pnx)*xh2
+        ncollco=(Av/pnx)*xco
         if ncollh2>nh2_co[42] or ncollco>nco[51] or Av>av_co[42] or xkin==0.0:
             xk=xkold
         else:
             theta1 = interp1d(nco,    theta_nco )(ncollco)
             theta2 = interp1d(nh2_co, theta_nh2_co )(ncollh2)
             theta3 = interp1d(av_co,  theta_av_co )(Av)
-            xk     = pco*theta1*theta2*theta3
+            xk     = Chi*pco*theta1*theta2*theta3
         
         #print("%s,': self-shielding:',%10.3e,' =>',%10.3e)"%(specx,xkold,xk))
     return xk
