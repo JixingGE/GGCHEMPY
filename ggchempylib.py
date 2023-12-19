@@ -412,7 +412,7 @@ class ggchempy(object):
                         xh2 = self.species.abun[self.species.idx_H2]
                         xco = self.species.abun[self.species.idx_CO]
                         xk  = self.gas.Chi*self.reactions.a[i]*np.exp(-self.reactions.c[i]*self.gas.Av)
-                        self.reactions.rc[i] = H2_CO_self_shielding(specx, self.gas.Av, xh2, xco, xk)
+                        self.reactions.rc[i] = H2_CO_self_shielding(specx, self.gas.Chi,self.gas.Av, xh2, xco, xk)
                         #print(specx,'self-shielding is considered: rc=',reactions.rc[i],xco,xh2)
                     else:
                         self.reactions.rc[i] = self.gas.Chi*self.reactions.a[i]*np.exp(-self.reactions.c[i]*self.gas.Av)
